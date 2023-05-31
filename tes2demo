@@ -1,0 +1,31 @@
+
+In continuation with OCI loader automation series, I want to recap what we discussed/covered on previous demos  and we will also discuss more on new developments for this sprint..
+The Intent of these automation scripts is to add to our CI/CD pipeline and Run Tese tests aganst the build code changes. Detect any errors failures with our code changes ...we want to be consistent with our test results as we advance further in developing OCI loader...
+RECAP:
+•	We had discussed on Diffrent stages of OCI loader
+•	Manual steps on uploading and connection to DB and query data loaded
+•	Qa automation Strategy 
+-	total records processed
+-	Additional validations on Specific fields will be validated
+•	like premium /commision value or sequence numbers...etc
+•	we had demo on Header validations - error scenarios..Invalid file processing for each file type and how we generated failure report
+1.	For this sprint, we have developed automaton script for Valid File processing , data load to Live Table for each contra records 
+2.	Validate record cout/header count and total file count
+3.	validate Contract records count for each typei.e 2201/2203/2204/2205..
+4.	Additionally, we have developed python script to read the input file we are uploading to s3 bucket.
+5.	So, we can get count of records before file process and have  match criteria after file process.. expcted vs Actual
+6.	We are also checking for additional special characters or even decimal or coma in input file and log message in output as file contains special characters..
+
+	We will log error detaisl once we have error log data impleented in Db with description on error...
+	We will also work on additional File Validations like- premium amount/ commision rate value and sequence numbering other important fields ..
+
+The Intent of these automation scripts is to add to our CI/CD pipeline and Run Tese tests aganst the build code changes.
+Detect any errors failures with our code changes ...we want to be consistent with our test results as we are advance further...
+Here is the Sample Output, i wanted to show how outut log lookslike 
+For File Read Count  &
+Actual data Processed Count
+
+
+
+
+
